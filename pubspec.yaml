@@ -1,0 +1,73 @@
+name: my_spotify
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  flutter_svg:
+  flutter_bloc:
+  get_it:
+  dartz: ^0.10.1
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  path_provider: ^2.1.5
+  just_audio: ^0.9.42
+  assets_audio_player: ^3.1.1
+  hive_flutter: ^1.1.0
+  cached_network_image: ^3.3.1
+  http: ^1.2.2
+  audio_video_progress_bar: ^2.0.3
+  audioplayers: ^6.1.0
+  palette_generator: ^0.3.3+5
+  spotify: ^0.13.7
+  youtube_explode_dart: ^2.3.6
+  intl: ^0.19.0
+  scrollable_positioned_list: ^0.3.8
+  audio_service: ^0.18.15
+  on_audio_query: ^2.9.0
+  permission_handler: ^11.3.1
+  transparent_image: ^2.0.1
+  scroll_to_index: ^3.0.1
+  get: ^4.6.6
+  hydrated_bloc: ^9.1.5
+  cloud_firestore: ^5.5.0
+  provider: ^6.1.2
+  dynamic_color: ^1.7.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/vectors/
+
+  fonts:
+    - family: Sheerin
+      fonts:
+        - asset: assets/fonts/Sheerin-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Sheerin-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/Sheerin-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Sheerin-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Sheerin-Light.ttf
+          weight: 300
