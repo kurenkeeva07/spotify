@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:my_spotify/service_locator.dart';
+import 'package:my_spotify/core/di/service_locator.dart';
 
 import '../../../../core/usecase/usecase.dart';
 import '../repository/auth_repository.dart';

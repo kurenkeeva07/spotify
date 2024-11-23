@@ -1,30 +1,16 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_spotify/features/play_list/presentstion/screen/dashboard_screen.dart';
 import '../../../../common/widgets/appbar/basic_appbar.dart';
 import '../../../../common/widgets/button/basic_app_button.dart';
 import '../../../../core/configs/assets/app_vectors.dart';
-import '../../../../service_locator.dart';
+import '../../../../core/di/service_locator.dart';
 import '../../../auth/data/models/sign_in_user.dart';
 import '../../../auth/domain/usecase/sigin.dart';
-import '../../../home/presentation/screens/home_screen.dart';
-import '../../../home/services/song_handler.dart';
 import '../../../register/presentation/screen/register_page.dart';
 
-SongHandler _songHandler = SongHandler();
 
-Future<void> sign() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  _songHandler = await AudioService.init(
-    builder: () => SongHandler(),
-    config: const AudioServiceConfig(
-      androidNotificationChannelId: 'com.dum.app',
-      androidNotificationChannelName: 'Dum Player',
-      androidNotificationOngoing: true,
-      androidShowNotificationBadge: true,
-    ),
-  );
-}
 
 class SigninPage extends StatelessWidget {
   SigninPage({super.key});
@@ -76,8 +62,7 @@ class SigninPage extends StatelessWidget {
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      HomePage(songHandler: _songHandler,)),
+                                  builder: (BuildContext context) => const DashBoardScreen()),
                                   (route) => false
                           );
                         }

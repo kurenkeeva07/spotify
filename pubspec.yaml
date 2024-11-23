@@ -41,6 +41,10 @@ dependencies:
   cloud_firestore: ^5.5.0
   provider: ^6.1.2
   dynamic_color: ^1.7.0
+  video_player: ^2.9.2
+  auto_size_text: ^3.0.0
+  animations: ^2.0.11
+  flutter_barcode_scanner: ^2.0.0
 
 
 dev_dependencies:

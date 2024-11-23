@@ -62,7 +62,7 @@ class GetStartedPage extends StatelessWidget {
                   'Spotify is a Swedish audio streaming and media service provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon. But this mobile app was created by Akmaral in 2024',
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
-                      color: AppColors.lightGrey,
+                      color: MyColors.lightGrey,
                       fontSize: 13
                   ),
                   textAlign: TextAlign.center,

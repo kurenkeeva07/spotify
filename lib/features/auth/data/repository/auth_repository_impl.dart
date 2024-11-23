@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import '../../../../service_locator.dart';
+import '../../../../core/di/service_locator.dart';
 import '../../domain/repository/auth_repository.dart';
 import '../models/create_user.dart';
 import '../models/sign_in_user.dart';

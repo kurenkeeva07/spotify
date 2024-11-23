@@ -88,7 +88,7 @@ class _SongPlayerState extends State<SongPlayer> {
                       Text(
                         'Singing Now',
                         style: textTheme.bodyMedium
-                            ?.copyWith(color: AppColors.primary),
+                            ?.copyWith(color: MyColors.primary),
                       ),
                       const SizedBox(height: 6),
                       Row(
@@ -145,7 +145,7 @@ class _SongPlayerState extends State<SongPlayer> {
                           ),
                           const Icon(
                             Icons.favorite,
-                            color: AppColors.primary,
+                            color: MyColors.primary,
                           )
                         ],
                       ),
@@ -208,7 +208,7 @@ class _SongPlayerState extends State<SongPlayer> {
                           IconButton(
                               onPressed: () {},
                               icon: const Icon(Icons.loop,
-                                  color: AppColors.primary)),
+                                  color: MyColors.primary)),
                         ],
                       )
                     ],

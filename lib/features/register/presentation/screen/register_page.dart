@@ -2,31 +2,16 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_spotify/core/configs/theme/app_colors.dart';
-
+import 'package:my_spotify/features/home/presentation/screen/home_screen.dart';
+import 'package:my_spotify/features/play_list/presentstion/screen/dashboard_screen.dart';
 import '../../../../common/widgets/appbar/basic_appbar.dart';
 import '../../../../common/widgets/button/basic_app_button.dart';
 import '../../../../core/configs/assets/app_vectors.dart';
-import '../../../../service_locator.dart';
+import '../../../../core/di/service_locator.dart';
 import '../../../auth/data/models/create_user.dart';
 import '../../../auth/domain/usecase/signup.dart';
-import '../../../home/presentation/screens/home_screen.dart';
-import '../../../home/services/song_handler.dart';
 import '../../../sing_in/presentation/screen/sign_in_page.dart';
 
-SongHandler _songHandler = SongHandler();
-
-Future<void> reg() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  _songHandler = await AudioService.init(
-    builder: () => SongHandler(),
-    config: const AudioServiceConfig(
-      androidNotificationChannelId: 'com.dum.app',
-      androidNotificationChannelName: 'Dum Player',
-      androidNotificationOngoing: true,
-      androidShowNotificationBadge: true,
-    ),
-  );
-}
 
 class RegisterPage extends StatelessWidget {
   RegisterPage({super.key});
@@ -73,13 +58,13 @@ class RegisterPage extends StatelessWidget {
                   );
                   result.fold(
                           (l){
-                        var snackbar = SnackBar(content: Text(l, style: const TextStyle(color: AppColors.primary),),behavior: SnackBarBehavior.floating,);
+                        var snackbar = SnackBar(content: Text(l, style: const TextStyle(color: MyColors.primary),),behavior: SnackBarBehavior.floating,);
                         ScaffoldMessenger.of(context).showSnackBar(snackbar);
                       },
                           (r){
                         Navigator.pushAndRemoveUntil(
                             context,
-                            MaterialPageRoute(builder: (BuildContext context) => HomePage(songHandler: _songHandler)),
+                            MaterialPageRoute(builder: (BuildContext context) => const DashBoardScreen()),
                                 (route) => false
                         );
                       }
